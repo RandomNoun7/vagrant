@@ -1,1 +1,0 @@
-{"virtualbox":{"C:/src":{"guestpath":"C:/src","hostpath":"C:/src","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/vagrant/boxes/win2012","disabled":false,"__vagrantfile":true}}}
