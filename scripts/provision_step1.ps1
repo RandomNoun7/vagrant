@@ -1,6 +1,7 @@
 net use G: \\localhost\src
+Install-Module POSH-Git -force
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-choco install visualstudiocode conemu hub -y
+choco install visualstudiocode conemu hub firacode -y
 if(-not (Get-Command Install-PackageProvider -ErrorAction SilentlyContinue)){
     msiexec.exe /package C:\vagrants\files\PackageManagement_x64.msi /quiet
 }
@@ -17,6 +18,9 @@ $gitconfig = @'
     default = simple
 [hub]
     protocol = ssh
+[alias]
+    graph = log --oneline --graph --all
+    amend = commit --amend --no-edit
 '@
 
 Set-Content c:\users\vagrant\.gitconfig -Value $gitconfig
