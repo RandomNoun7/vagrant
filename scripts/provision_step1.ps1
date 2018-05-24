@@ -1,5 +1,3 @@
-net use G: \\localhost\src
-Install-Module POSH-Git -force
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco install visualstudiocode conemu hub firacode -y
 if(-not (Get-Command Install-PackageProvider -ErrorAction SilentlyContinue)){
@@ -24,3 +22,7 @@ $gitconfig = @'
 '@
 
 Set-Content c:\users\vagrant\.gitconfig -Value $gitconfig
+
+Install-PackageProvider -name NuGet -minimumVersion 2.8.5.208 -force
+
+Install-Module POSH-Git -force
