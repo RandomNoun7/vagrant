@@ -26,3 +26,5 @@ Set-Content c:\users\vagrant\.gitconfig -Value $gitconfig
 Install-PackageProvider -name NuGet -minimumVersion 2.8.5.208 -force
 
 Install-Module POSH-Git -force
+
+Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name FontSmoothing -Value 2
