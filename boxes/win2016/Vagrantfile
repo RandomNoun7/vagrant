@@ -39,6 +39,14 @@ config.vm.provision "file",
   source: 'C:\Users\bhurt\AppData\Roaming\Code\User\settings.json',
   destination: 'c:\users\vagrant\AppData\Roaming\Code\User\settings.json'
 
+config.vm.provision "file",
+  source: "c:\\Users\\bhurt\\.ssh\\id_rsa",
+  destination: "c:\\Users\\vagrant\\.ssh\\id_rsa"
+
+  config.vm.provision "file",
+    source: "c:\\Users\\bhurt\\.ssh\\id_rsa.pub",
+    destination: "c:\\Users\\vagrant\\.ssh\\id_rsa.pub"
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
