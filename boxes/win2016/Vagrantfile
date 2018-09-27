@@ -78,7 +78,7 @@ config.vm.provision "file",
     #vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/src", "1"]
   
     # Customize the amount of memory on the VM:
-    vb.memory = "4096"
+    vb.memory = "8192"
   end
   #
   # View the documentation for the provider you are using for more
